@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+  <html lang="ja">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tsumugi works | 藍と、静かな手仕事</title>
+  <meta name="description" content="クロスステッチと藍染の物語。一針が、静けさになる。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --indigo-deep: #16324f;
+    --indigo: #2b5a80;
+    --indigo-mid: #4a7ba6;
+    --indigo-light: #a9c6dc;
+          --cream: #faf6ee;
+          --cream-deep: #f0e9d8;
+          --ink: #2b2b2b;
+    --gold: #c9a24b;
+      }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+        font-family: 'Noto Sans JP', sans-serif;
+    color: var(--ink);
+    background: var(--cream);
+    line-height: 1.9;
+    font-weight: 300;
+}
+  h1, h2, h3, .serif {
+        font-family: 'Noto Serif JP', serif;
+}
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 0 24px; }
+
+  /* Header */
+  header {
+        position: sticky; top: 0; z-index: 100;
+    background: rgba(250,246,238,0.92);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--cream-deep);
+}
+  header .wrap {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 16px 24px;
+  }
+  .logo {
+        font-size: 1.15rem; letter-spacing: 0.08em; font-weight: 700;
+    color: var(--indigo-deep);
+}
+  nav { display: flex; gap: 28px; font-size: 0.88rem; }
+  nav a { color: var(--indigo); padding: 4px 0; border-bottom: 1px solid transparent; transition: border-color .2s; }
+  nav a:hover { border-color: var(--indigo); }
+  .nav-cta {
+        background: var(--indigo-deep); color: #fff !important;
+      padding: 8px 18px; border-radius: 999px; font-size: 0.82rem;
+}
+
+  /* Hero */
+  .hero {
+        background: linear-gradient(160deg, var(--indigo-deep) 0%, var(--indigo) 55%, var(--indigo-mid) 100%);
+    color: #f4f1e8;
+        padding: 90px 24px 100px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::after {
+        content: "";
+    position: absolute; inset: 0;
+    background-image: radial-gradient(circle at 20% 30%, rgba(255,255,255,0.05) 0, transparent 40%),
+                             radial-gradient(circle at 80% 70%, rgba(255,255,255,0.06) 0, transparent 45%);
+}
+  .hero-inner { position: relative; z-index: 1; max-width: 640px; margin: 0 auto; }
+  .motif {
+        width: 48px; height: 48px; margin: 0 auto 28px;
+    opacity: 0.9;
+}
+  .hero h1 {
+        font-size: 2.1rem; font-weight: 500; letter-spacing: 0.06em;
+    margin-bottom: 18px; line-height: 1.6;
+}
+  .hero p.lead {
+        font-size: 1rem; opacity: 0.88; margin-bottom: 36px; font-weight: 300;
+}
+  .hero-tagline {
+        font-family: 'Noto Serif JP', serif;
+    font-size: 1.35rem; letter-spacing: 0.15em; margin-bottom: 8px;
+    color: var(--gold);
+}
+  .btn {
+        display: inline-block; padding: 14px 36px; border-radius: 999px;
+    font-size: 0.9rem; letter-spacing: 0.05em; font-weight: 500;
+    transition: transform .2s, box-shadow .2s;
+}
+  .btn-primary {
+        background: var(--gold); color: var(--indigo-deep);
+}
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
+  .btn-outline {
+        border: 1px solid rgba(244,241,232,0.5); color: #f4f1e8; margin-left: 12px;
+  }
+  .btn-outline:hover { background: rgba(244,241,232,0.1); }
+
+  /* Sections */
+  section { padding: 90px 24px; }
+  .section-label {
+        font-size: 0.78rem; letter-spacing: 0.2em; color: var(--gold);
+    text-transform: uppercase; margin-bottom: 14px; display: block;
+}
+  .section-title {
+        font-size: 1.7rem; font-weight: 500; color: var(--indigo-deep);
+    margin-bottom: 36px; letter-spacing: 0.03em;
+}
+
+  /* About */
+  .about { background: var(--cream); }
+  .about-grid {
+        display: grid; grid-template-columns: 1fr; gap: 40px;
+}
+  .about p { margin-bottom: 18px; font-size: 0.98rem; color: #444; }
+  .signature {
+        margin-top: 28px; font-family: 'Noto Serif JP', serif;
+    color: var(--indigo-deep); font-size: 1rem;
+}
+  .quote-block {
+        border-left: 3px solid var(--gold);
+    padding: 20px 28px; margin: 32px 0;
+    background: var(--cream-deep);
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.05rem; color: var(--indigo-deep);
+}
+
+  /* Patterns */
+  .patterns { background: var(--indigo-deep); color: #f4f1e8; }
+    .patterns .section-title { color: #f4f1e8; }
+        .patterns .section-label { color: var(--gold); }
+  .patterns-intro { max-width: 600px; margin-bottom: 44px; opacity: 0.85; font-size: 0.95rem; }
+  .pattern-grid {
+        display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+  }
+  .pattern-card {
+        background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 4px;
+    padding: 28px 24px;
+    transition: background .2s, transform .2s;
+    display: flex; flex-direction: column; height: 100%;
+}
+  .pattern-card:hover { background: rgba(255,255,255,0.1); transform: translateY(-3px); }
+  .pattern-card h3 {
+        font-size: 1.02rem; font-weight: 500; margin-bottom: 12px; line-height: 1.6;
+}
+  .pattern-price {
+        color: var(--gold); font-size: 0.95rem; margin-top: auto; padding-top: 16px;
+}
+  .pattern-link {
+        font-size: 0.82rem; opacity: 0.7; margin-top: 6px; display: inline-block;
+}
+  .shop-cta { text-align: center; margin-top: 50px; }
+
+  /* Journal */
+  .journal { background: var(--cream); }
+  .journal-intro { max-width: 620px; margin-bottom: 44px; color: #555; font-size: 0.98rem; }
+  .journal-entry {
+        border-top: 1px solid var(--cream-deep);
+    padding: 28px 0;
+}
+  .journal-entry:last-child { border-bottom: 1px solid var(--cream-deep); }
+  .journal-date { font-size: 0.8rem; color: var(--indigo-mid); letter-spacing: 0.05em; margin-bottom: 8px; }
+  .journal-title { font-family: 'Noto Serif JP', serif; font-size: 1.15rem; color: var(--indigo-deep); margin-bottom: 10px; }
+  .journal-excerpt { color: #555; font-size: 0.95rem; }
+  .journal-empty {
+        text-align: center; padding: 50px 24px;
+    border: 1px dashed var(--indigo-light);
+    border-radius: 6px; color: var(--indigo-mid); font-size: 0.92rem;
+}
+
+  /* Vision */
+  .vision {
+        background: var(--cream-deep);
+    text-align: center;
+}
+  .vision .wrap { max-width: 680px; }
+  .vision p { color: #555; font-size: 0.96rem; margin-bottom: 16px; }
+  .vision .serif { font-size: 1.3rem; color: var(--indigo-deep); margin-bottom: 20px; }
+
+  footer {
+        background: var(--indigo-deep); color: rgba(244,241,232,0.7);
+    padding: 48px 24px; text-align: center; font-size: 0.85rem;
+}
+  footer a { color: var(--gold); }
+  footer .foot-links { margin-bottom: 16px; }
+  footer .foot-links a { margin: 0 10px; }
+
+  @media (min-width: 720px) {
+    .about-grid { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 2.5rem; }
+}
+  @media (max-width: 600px) {
+    nav { display: none; }
+    section { padding: 64px 20px; }
+    .hero { padding: 70px 20px 80px; }
+}
+</style>
+  </head>
+  <body>
+
+  <header>
+    <div class="wrap">
+      <div class="logo">紬 Tsumugi works</div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#patterns">Patterns</a>
+        <a href="#journal">Journal</a>
+        <a href="https://tsumugiworksjp.etsy.com" class="nav-cta" target="_blank" rel="noopener">Etsy Shop</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <svg class="motif" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g stroke="#c9a24b" stroke-width="1.4" opacity="0.9">
+          <path d="M32 4 L54 32 L32 60 L10 32 Z"/>
+          <path d="M32 4 L32 60"/>
+          <path d="M10 32 L54 32"/>
+          <path d="M32 4 L10 32 L32 60 L54 32 Z" opacity="0.5"/>
+        </g>
+      </svg>
+      <div class="hero-tagline">藍染とクロスステッチ</div>
+      <h1>一針が、静けさになる。</h1>
+      <p class="lead">クロスステッチが大好きなミオです。<br>日々の生活の中でホッと一息つける時間を、図案にしてお届けしています。</p>
+      <a href="https://tsumugiworksjp.etsy.com" class="btn btn-primary" target="_blank" rel="noopener">図案をみる（Etsy）</a>
+      <a href="#journal" class="btn btn-outline">ミオの言葉を読む</a>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="wrap about-grid">
+      <span class="section-label">About</span>
+      <h2 class="section-title">はじめまして、ミオです</h2>
+      <div class="about">
+        <p>広島県在住、クロスステッチが大好きなミオです。クロスステッチを始めたのは中学生の頃で、それから時間があるときはずっと針を持ってきました。</p>
+        <p>アメリカ駐在中に、またクロスステッチがしたくなって図案を探したのですが、好きな図案がなかなか見つからなくて。それなら自分で作ろうと思ったのが、図案づくりのきっかけです。</p>
+        <p>海外で暮らしてみて、日本で生まれ育ったことのありがたさに気づきました。藍色の美しさや、手を動かして何かを作る時間。そういう日本らしいものを、これからも大事にしていきたいと思っています。</p>
+        <p>帰国してからは、その頃の経験を活かしながら、オリジナルのクロスステッチ図案をPDFダウンロード版で届けています。初心者の方でも迷わず始めやすい軽やかなサイズ感で、日々の生活の中でホッと一息つける「静かで豊かな時間」をお届けできたらと思っています。</p>
+        <div class="quote-block">一針が、静けさになる。</div>
+        <p>今はまだ図案の販売だけですが、これから少しずつ、日本の伝統である「藍染（Japan Blue）」の美しい濃淡を活かした図案や糸も届けていきたいと思っています。ゆくゆくは自分の手で藍を育て、綿を育て、1から手作りするのが夢です。</p>
+        <div class="signature">ミオ</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="patterns" id="patterns">
+    <div class="wrap">
+      <span class="section-label">Patterns</span>
+      <h2 class="section-title">クロスステッチ図案</h2>
+      <p class="patterns-intro">初心者の方でも迷わず始めやすいサイズ感で作っています。PDFダウンロードなので、注文後すぐに始められます。詳しい仕様や在庫はEtsyショップでご確認ください。</p>
+      <div class="pattern-grid">
+        <div class="pattern-card">
+          <h3>Moon Rabbit Cross Stitch Pattern<br>Japanese Tsukimi Autumn Motif</h3>
+          <div class="pattern-price">$8.99 ・ Digital Download</div>
+          <a class="pattern-link" href="https://www.etsy.com/listing/4546079936/moon-rabbit-cross-stitch-pattern" target="_blank" rel="noopener">Etsyで見る →</a>
+        </div>
+        <div class="pattern-card">
+          <h3>Hanakuidori Bird Cross Stitch Pattern<br>Japanese Shosoin Motif</h3>
+          <div class="pattern-price">$11.99 ・ Digital Download</div>
+          <a class="pattern-link" href="https://www.etsy.com/listing/4545401782/hanakuidori-bird-cross-stitch-pattern" target="_blank" rel="noopener">Etsyで見る →</a>
+        </div>
+        <div class="pattern-card">
+          <h3>Japanese Asanoha Cross Stitch Pattern<br>Traditional Hemp Leaf, Beginner Friendly</h3>
+          <div class="pattern-price">$12.00 ・ Digital Download</div>
+          <a class="pattern-link" href="https://www.etsy.com/listing/4503022396/japanese-asanoha-cross-stitch-pattern" target="_blank" rel="noopener">Etsyで見る →</a>
+        </div>
+      </div>
+      <div class="shop-cta">
+        <a href="https://tsumugiworksjp.etsy.com" class="btn btn-primary" target="_blank" rel="noopener">すべての図案をEtsyでみる</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="journal" id="journal">
+    <div class="wrap">
+      <span class="section-label">Journal</span>
+      <h2 class="section-title">ミオの言葉</h2>
+      <p class="journal-intro">クロスステッチのこと、藍染のこと、家族のこと。ここには、作品の裏側にある気持ちを少しずつ書き残していきます。</p>
+
+      <!-- 新しい投稿はここに追加していきます -->
+      <div class="journal-empty">
+        まだ何も書かれていません。<br>最初の言葉を、ここに紡いでいきましょう。
+      </div>
+    </div>
+  </section>
+
+  <section class="vision">
+    <div class="wrap">
+      <span class="section-label">Dream</span>
+      <div class="serif">藍染工房 × ゲストハウス × 農</div>
+      <p>いつか自分の手で藍と綿を育て、糸を染め、そこに人が泊まりに来られる場所をつくりたい。藍を育てるところから始めることは、日本の伝統をつないでいくことだと思っています。その歩みを、これからも少しずつここに記していきます。</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="foot-links">
+      <a href="https://tsumugiworksjp.etsy.com" target="_blank" rel="noopener">Etsy Shop</a>
+      <a href="#about">About</a>
+      <a href="#journal">Journal</a>
+    </div>
+    <div>© 2026 Tsumugi works. All words and stitches by Mio.</div>
+  </footer>
+
+  </body>
+  </html>
+  
