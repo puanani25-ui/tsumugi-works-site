@@ -114,6 +114,26 @@
     font-size: 1.1rem; color: var(--ai-4); max-width: 42em;
   }
 
+  /* Motifs */
+  .motifs { background: var(--paper); border-top: 2px dashed var(--ai-1); border-bottom: 2px dashed var(--ai-1); }
+  .motifs-intro { max-width: 42em; margin-bottom: 32px; color: #3d3d3d; font-size: 1rem; }
+  .motif-strip { position: relative; overflow: hidden; height: 64px; margin-bottom: 36px; background: var(--ai-tint); border-radius: 6px; outline: 2px dashed var(--ai-2); outline-offset: -7px; }
+  .motif-strip svg { position: absolute; inset: 0; width: 100%; height: 100%; opacity: .32; }
+  .motif-list { display: grid; grid-template-columns: 1fr; }
+  .motif { padding: 22px 0; }
+  .motif + .motif { border-top: 2px dashed var(--ai-1); }
+  .motif h3 { font-size: 1.45rem; font-weight: 700; color: var(--ai-4); line-height: 2; margin-bottom: 6px; }
+  .motif h3 rt { font-size: .5em; font-weight: 500; letter-spacing: .08em; color: var(--ai-3); }
+  .motif p { font-size: .98rem; color: #3d3d3d; margin-bottom: 12px; }
+  .motif a { color: var(--ai-3); font-weight: 500; font-size: .92rem; text-decoration: underline; text-underline-offset: 3px; }
+  @media (min-width: 800px) {
+    .motif-list { grid-template-columns: repeat(3, 1fr); }
+    .motif { padding: 4px 28px 8px; }
+    .motif:first-child { padding-left: 0; }
+    .motif:last-child { padding-right: 0; }
+    .motif + .motif { border-top: 0; border-left: 2px dashed var(--ai-1); }
+  }
+
   /* Patterns */
   .patterns { background: var(--ai-tint); }
   .patterns-intro { max-width: 600px; margin-bottom: 44px; color: #3d3d3d; font-size: 1rem; }
@@ -198,6 +218,7 @@
     <div class="logo">Tsumugi works</div>
     <nav>
       <a href="#about">About</a>
+      <a href="#motifs">Motifs</a>
       <a href="#patterns">Patterns</a>
       <a href="#journal">Blog</a>
       <a href="https://tsumugiworksjp.etsy.com" class="nav-cta" target="_blank" rel="noopener">Etsy Shop</a>
@@ -229,6 +250,31 @@
     <div class="quote-block">画面を見ない時間、糸と図案だけの時間。</div>
     <p>今はまだ図案の販売だけですが、これから少しずつ、日本の伝統である「藍染（Japan Blue）」の美しい濃淡を活かした図案や糸も届けていきたいと思っています。ゆくゆくは自分の手で藍を育て、綿を育て、1から手作りするのが夢です。</p>
     <div class="signature">みお</div>
+  </div>
+</section>
+
+<section class="motifs" id="motifs">
+  <div class="wrap">
+    <h2 class="section-title">日本の伝統文様</h2>
+    <p class="motifs-intro">日本には、着物や器、建物の飾りに、昔から使われてきた模様があります。どの模様にも、使われてきた理由や願いがあります。私の図案は、そうした伝統文様を、生成りと藍4段階の合わせて5色で刺せるクロスステッチにしたものです。</p>
+    <div class="motif-strip" aria-hidden="true"><svg focusable="false"><rect width="100%" height="100%" fill="url(#asanoha)"/></svg></div>
+    <div class="motif-list">
+      <div class="motif">
+        <h3><ruby>麻の葉<rt>あさのは</rt></ruby></h3>
+        <p>麻は成長が早く、まっすぐ育つ植物です。そのため、子どもが元気に育つようにという願いを込めて、産着（うぶぎ）などに使われてきました。</p>
+        <a href="https://www.etsy.com/listing/4503022396/japanese-asanoha-cross-stitch-pattern" target="_blank" rel="noopener">麻の葉の図案を見る（Etsy）</a>
+      </div>
+      <div class="motif">
+        <h3><ruby>花喰鳥<rt>はなくいどり</rt></ruby></h3>
+        <p>鳥が花の枝をくわえた模様です。奈良の正倉院に伝わる宝物にも使われている、古い歴史のある文様です。</p>
+        <a href="https://www.etsy.com/listing/4545401782/hanakuidori-bird-cross-stitch-pattern" target="_blank" rel="noopener">花喰鳥の図案を見る（Etsy）</a>
+      </div>
+      <div class="motif">
+        <h3><ruby>月とうさぎ<rt>つきとうさぎ</rt></ruby></h3>
+        <p>月の中でうさぎがもちをついている、という日本の言い伝えから生まれた模様です。秋のお月見の時期に、よく飾られます。</p>
+        <a href="https://www.etsy.com/listing/4546079936/moon-rabbit-cross-stitch-pattern" target="_blank" rel="noopener">月とうさぎの図案を見る（Etsy）</a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -283,6 +329,7 @@
   <div class="foot-links">
     <a href="https://tsumugiworksjp.etsy.com" target="_blank" rel="noopener">Etsy Shop</a>
     <a href="#about">About</a>
+    <a href="#motifs">Motifs</a>
     <a href="#journal">Blog</a>
     <a href="https://www.instagram.com/mio_tsumugiworks/" target="_blank" rel="noopener">Instagram</a>
     <a href="/privacy-policy-ja.html">プライバシーポリシー</a>
