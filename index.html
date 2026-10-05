@@ -114,26 +114,6 @@
     font-size: 1.1rem; color: var(--ai-4); max-width: 42em;
   }
 
-  /* Motifs */
-  .motifs { background: var(--paper); border-top: 2px dashed var(--ai-1); border-bottom: 2px dashed var(--ai-1); }
-  .motifs-intro { max-width: 42em; margin-bottom: 32px; color: #3d3d3d; font-size: 1rem; }
-  .motif-strip { position: relative; overflow: hidden; height: 64px; margin-bottom: 36px; background: var(--ai-tint); border-radius: 6px; outline: 2px dashed var(--ai-2); outline-offset: -7px; }
-  .motif-strip svg { position: absolute; inset: 0; width: 100%; height: 100%; opacity: .32; }
-  .motif-list { display: grid; grid-template-columns: 1fr; }
-  .motif { padding: 22px 0; }
-  .motif + .motif { border-top: 2px dashed var(--ai-1); }
-  .motif h3 { font-size: 1.45rem; font-weight: 700; color: var(--ai-4); line-height: 2; margin-bottom: 6px; }
-  .motif h3 rt { font-size: .5em; font-weight: 500; letter-spacing: .08em; color: var(--ai-3); }
-  .motif p { font-size: .98rem; color: #3d3d3d; margin-bottom: 12px; }
-  .motif a { color: var(--ai-3); font-weight: 500; font-size: .92rem; text-decoration: underline; text-underline-offset: 3px; }
-  @media (min-width: 800px) {
-    .motif-list { grid-template-columns: repeat(3, 1fr); }
-    .motif { padding: 4px 28px 8px; }
-    .motif:first-child { padding-left: 0; }
-    .motif:last-child { padding-right: 0; }
-    .motif + .motif { border-top: 0; border-left: 2px dashed var(--ai-1); }
-  }
-
   /* Patterns */
   .patterns { background: var(--ai-tint); }
   .patterns-intro { max-width: 600px; margin-bottom: 44px; color: #3d3d3d; font-size: 1rem; }
@@ -155,13 +135,31 @@
   .pattern-link { font-size: 0.88rem; color: var(--ai-3); margin-top: 6px; display: inline-block; text-decoration: underline; text-underline-offset: 3px; }
   .shop-cta { text-align: center; margin-top: 50px; }
 
-  /* Blog */
-  .journal-intro { max-width: 620px; margin-bottom: 40px; color: #3d3d3d; font-size: 1rem; }
-  .journal-entry { border-top: 2px dashed var(--ai-1); padding: 28px 0; }
-  .journal-entry:last-child { border-bottom: 2px dashed var(--ai-1); }
-  .journal-date { font-size: 0.85rem; color: var(--ai-3); letter-spacing: .05em; margin-bottom: 8px; }
-  .journal-title { font-family: 'Noto Serif JP', serif; font-weight: 700; font-size: 1.2rem; color: var(--ai-4); margin-bottom: 10px; }
+  /* Blog: 麻の葉の帯と、縫い目つきのパッチ */
+  .blog-band { position: relative; height: 84px; background: var(--ai-1); overflow: hidden; }
+  .blog-band svg { position: absolute; inset: 0; width: 100%; height: 100%; opacity: .42; }
+  .journal-intro { max-width: 620px; margin-bottom: 36px; color: #3d3d3d; font-size: 1rem; }
+  .journal-list { display: grid; gap: 28px; }
+  .journal-entry {
+    position: relative; overflow: hidden;
+    background: var(--paper); border-radius: 6px;
+    padding: 30px 32px 28px;
+    box-shadow: 0 3px 0 rgba(27,42,74,.12);
+    outline: 2px dashed var(--ai-2); outline-offset: -9px;
+  }
+  .journal-entry .corner {
+    position: absolute; top: 0; right: 0; width: 200px; height: 200px; opacity: .4; pointer-events: none;
+    -webkit-mask-image: linear-gradient(225deg, #000 0%, transparent 72%);
+    mask-image: linear-gradient(225deg, #000 0%, transparent 72%);
+  }
+  .journal-entry > :not(.corner) { position: relative; }
+  .journal-date { font-size: 0.85rem; color: var(--ai-3); letter-spacing: .05em; margin-bottom: 6px; }
+  .journal-title { font-family: 'Noto Serif JP', serif; font-weight: 700; font-size: 1.25rem; line-height: 1.7; color: var(--ai-4); margin-bottom: 10px; }
+  .journal-title .ph { display: inline-block; }
+  .journal-title a { text-decoration: underline; text-decoration-color: var(--ai-1); text-decoration-thickness: 2px; text-underline-offset: 5px; }
+  .journal-title a:hover { text-decoration-color: var(--ai-2); }
   .journal-excerpt { color: #3d3d3d; font-size: 0.98rem; max-width: 42em; }
+  .journal-more { display: inline-block; margin-top: 14px; color: var(--ai-3); font-weight: 500; font-size: .95rem; text-decoration: underline; text-underline-offset: 4px; }
 
   /* Dream */
   .vision { background: var(--ai-1); text-align: center; }
@@ -183,6 +181,8 @@
     .hero { padding: 40px 16px 48px; }
     .patch { padding: 40px 22px 36px; outline-offset: -9px; }
     .pattern-card:nth-child(odd), .pattern-card:nth-child(even) { transform: none; }
+    .journal-entry { padding: 26px 22px 24px; outline-offset: -8px; }
+    .blog-band { height: 64px; }
   }
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
@@ -218,7 +218,6 @@
     <div class="logo">Tsumugi works</div>
     <nav>
       <a href="#about">About</a>
-      <a href="#motifs">Motifs</a>
       <a href="#patterns">Patterns</a>
       <a href="#journal">Blog</a>
       <a href="https://tsumugiworksjp.etsy.com" class="nav-cta" target="_blank" rel="noopener">Etsy Shop</a>
@@ -253,31 +252,6 @@
   </div>
 </section>
 
-<section class="motifs" id="motifs">
-  <div class="wrap">
-    <h2 class="section-title">日本の伝統文様</h2>
-    <p class="motifs-intro">日本には、着物や器、建物の飾りに、昔から使われてきた模様があります。どの模様にも、使われてきた理由や願いがあります。私の図案は、そうした伝統文様を、生成りと藍4段階の合わせて5色で刺せるクロスステッチにしたものです。</p>
-    <div class="motif-strip" aria-hidden="true"><svg focusable="false"><rect width="100%" height="100%" fill="url(#asanoha)"/></svg></div>
-    <div class="motif-list">
-      <div class="motif">
-        <h3><ruby>麻の葉<rt>あさのは</rt></ruby></h3>
-        <p>麻は成長が早く、まっすぐ育つ植物です。そのため、子どもが元気に育つようにという願いを込めて、産着（うぶぎ）などに使われてきました。</p>
-        <a href="https://www.etsy.com/listing/4503022396/japanese-asanoha-cross-stitch-pattern" target="_blank" rel="noopener">麻の葉の図案を見る（Etsy）</a>
-      </div>
-      <div class="motif">
-        <h3><ruby>花喰鳥<rt>はなくいどり</rt></ruby></h3>
-        <p>鳥が花の枝をくわえた模様です。奈良の正倉院に伝わる宝物にも使われている、古い歴史のある文様です。</p>
-        <a href="https://www.etsy.com/listing/4545401782/hanakuidori-bird-cross-stitch-pattern" target="_blank" rel="noopener">花喰鳥の図案を見る（Etsy）</a>
-      </div>
-      <div class="motif">
-        <h3><ruby>月とうさぎ<rt>つきとうさぎ</rt></ruby></h3>
-        <p>月の中でうさぎがもちをついている、という日本の言い伝えから生まれた模様です。秋のお月見の時期に、よく飾られます。</p>
-        <a href="https://www.etsy.com/listing/4546079936/moon-rabbit-cross-stitch-pattern" target="_blank" rel="noopener">月とうさぎの図案を見る（Etsy）</a>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section class="patterns" id="patterns">
   <div class="wrap">
     <h2 class="section-title">クロスステッチ図案</h2>
@@ -305,14 +279,28 @@
   </div>
 </section>
 
+<div class="blog-band" aria-hidden="true"><svg focusable="false"><rect width="100%" height="100%" fill="url(#asanoha)"/></svg></div>
 <section class="journal" id="journal">
   <div class="wrap">
     <h2 class="section-title">ブログ</h2>
     <p class="journal-intro">クロスステッチのこと、藍染のこと、家族のこと。ここには、作品の裏側にある気持ちを少しずつ書き残していきます。</p>
 
-    <!-- 新しい投稿はここに追加していきます -->
-    <div class="journal-entry"><div class="journal-date">2026.08.06</div><div class="journal-title">藍の種、二株だけ芽が出ました</div><div class="journal-excerpt">少し前にもらった藍の種、正直ちゃんと芽が出るか半信半疑だったんですが、2株だけ双葉が出てきました。<br><br>毎朝水をあげるのが、いつのまにか日課になってます。まだ小さいので、育つかどうかはこれからですが。<br><br>いつかこの藍で糸を染めて、図案も作れたらいいなと思ってます。気は早いですが、双葉を見ながらそんなことを考えてます。<br><br>クロスステッチも藍染めも、結局コツコツやるしかないもの。この2株も同じですね。<br><br>大きくなったらまた書きます。</div>
+    <div class="journal-list">
+      <!-- 新しい投稿はここに追加していきます（新しい順） -->
+      <div class="journal-entry">
+        <svg class="corner" aria-hidden="true" focusable="false"><rect width="100%" height="100%" fill="url(#asanoha)"/></svg>
+        <div class="journal-date">2026.10.05</div>
+        <h3 class="journal-title"><a href="/blog/traditional-motifs"><span class="ph">日本の伝統文様で、</span><span class="ph">クロスステッチの図案を</span><span class="ph">作っています</span></a></h3>
+        <p class="journal-excerpt">アメリカで好きな図案が見つからなかったことが、図案づくりの始まりでした。いま販売している「麻の葉」「花喰鳥」「月とうさぎ」には、それぞれ使われてきた理由があります。その由来と、藍色5色で刺す理由を書きました。</p>
+        <a class="journal-more" href="/blog/traditional-motifs">続きを読む</a>
+      </div>
 
+      <div class="journal-entry">
+        <svg class="corner" aria-hidden="true" focusable="false"><rect width="100%" height="100%" fill="url(#asanoha)"/></svg>
+        <div class="journal-date">2026.08.06</div>
+        <div class="journal-title">藍の種、二株だけ芽が出ました</div>
+        <div class="journal-excerpt">少し前にもらった藍の種、正直ちゃんと芽が出るか半信半疑だったんですが、2株だけ双葉が出てきました。<br><br>毎朝水をあげるのが、いつのまにか日課になってます。まだ小さいので、育つかどうかはこれからですが。<br><br>いつかこの藍で糸を染めて、図案も作れたらいいなと思ってます。気は早いですが、双葉を見ながらそんなことを考えてます。<br><br>クロスステッチも藍染めも、結局コツコツやるしかないもの。この2株も同じですね。<br><br>大きくなったらまた書きます。</div>
+      </div>
     </div>
   </div>
 </section>
@@ -329,7 +317,6 @@
   <div class="foot-links">
     <a href="https://tsumugiworksjp.etsy.com" target="_blank" rel="noopener">Etsy Shop</a>
     <a href="#about">About</a>
-    <a href="#motifs">Motifs</a>
     <a href="#journal">Blog</a>
     <a href="https://www.instagram.com/mio_tsumugiworks/" target="_blank" rel="noopener">Instagram</a>
     <a href="/privacy-policy-ja.html">プライバシーポリシー</a>
