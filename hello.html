@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Tsumugiworks links: Etsy shop, Instagram and website.">
+<title>Tsumugiworks Links</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Zen+Old+Mincho:wght@500;700&display=swap">
+<style>
+/* Layout: one narrow column for phones. Stitched band on fabric, name, three large link rows, language toggle. */
+:root {
+  --fabric: #F2EDE4;      /* 生成り */
+  --ai-1: #C3D3DE;        /* 一番薄い藍 */
+  --ai-2: #6E85B7;        /* 薄藍 */
+  --ai-3: #2A3B5F;        /* 中藍 */
+  --ai-4: #1B2A4A;        /* 濃藍 */
+
+  --bg: #F2EDE4;
+  --fg: #1B2A4A;
+  --muted: #4A5A7A;
+  --card: #FBF9F4;
+  --line: #C3D3DE;
+  --btn-bg: #1B2A4A;
+  --btn-fg: #F2EDE4;
+  --btn-sub: #C3D3DE;
+  --focus: #2A3B5F;
+
+  --font-display: "Zen Old Mincho", "Hiragino Mincho ProN", "Yu Mincho", serif;
+  --font-body: "Zen Kaku Gothic New", "Hiragino Sans", "Yu Gothic", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1B2A4A; --fg: #F2EDE4; --muted: #C3D3DE; --card: #22345A; --line: #3A4F7A;
+    --btn-bg: #F2EDE4; --btn-fg: #1B2A4A; --btn-sub: #2A3B5F; --focus: #C3D3DE;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1B2A4A; --fg: #F2EDE4; --muted: #C3D3DE; --card: #22345A; --line: #3A4F7A;
+  --btn-bg: #F2EDE4; --btn-fg: #1B2A4A; --btn-sub: #2A3B5F; --focus: #C3D3DE;
+  color-scheme: dark;
+}
+
+body { background: var(--bg); color: var(--fg); font-family: var(--font-body); padding-inline: 20px; padding-block: 28px 40px; line-height: 1.7; }
+.wrap { max-width: 440px; margin-inline: auto; display: flex; flex-direction: column; gap: 28px; }
+
+.lang { display: flex; justify-content: flex-end; gap: 0; }
+.lang button { font: inherit; font-size: 13px; letter-spacing: .08em; padding: 6px 14px; border: 1px solid var(--fg); background: transparent; color: var(--fg); cursor: pointer; min-height: 36px; }
+.lang button:first-child { border-radius: 4px 0 0 4px; }
+.lang button:last-child { border-radius: 0 4px 4px 0; border-left: 0; }
+.lang button[aria-pressed="true"] { background: var(--fg); color: var(--bg); }
+
+.fabric { background: var(--fabric); border-radius: 4px; padding: 10px; border: 1px solid var(--line); }
+.fabric svg { display: block; width: 100%; height: auto; }
+
+h1 { font-family: var(--font-display); font-weight: 700; font-size: 34px; line-height: 1.2; letter-spacing: .02em; margin: 0; text-wrap: balance; }
+.kicker { font-size: 13px; letter-spacing: .12em; color: var(--muted); margin: 0 0 6px; }
+.intro { margin: 12px 0 0; font-size: 16px; text-wrap: pretty; }
+
+.links { display: flex; flex-direction: column; gap: 12px; padding: 0; margin: 0; list-style: none; }
+.links a { display: flex; flex-direction: column; gap: 2px; padding: 16px 18px; background: var(--btn-bg); color: var(--btn-fg); text-decoration: none; border-radius: 6px; min-height: 64px; justify-content: center; }
+.links a:hover { opacity: .92; }
+.links a:focus-visible, .lang button:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+.links .name { font-family: var(--font-display); font-weight: 700; font-size: 20px; letter-spacing: .03em; display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.links .name span[aria-hidden] { font-family: var(--font-body); font-weight: 400; }
+.links .desc { font-size: 14px; color: var(--btn-sub); }
+[data-theme="dark"] .links .desc { color: var(--btn-sub); }
+
+.facts { border-top: 1px solid var(--line); padding-top: 18px; display: grid; grid-template-columns: auto 1fr; gap: 6px 18px; margin: 0; font-size: 14px; }
+.facts dt { color: var(--muted); }
+.facts dd { margin: 0; font-variant-numeric: tabular-nums; min-width: 0; }
+
+.foot { font-size: 12px; color: var(--muted); margin: 0; }
+
+[lang-only] { display: none; }
+html[lang="ja"] [lang-only="ja"], html[lang="en"] [lang-only="en"] { display: revert; }
+html[lang="ja"] .links .name[lang-only="ja"], html[lang="en"] .links .name[lang-only="en"] { display: flex; }
+@media (prefers-reduced-motion: no-preference) {
+  .links a { transition: opacity .15s ease; }
+}
+
+:root { color-scheme: light; }
+body { margin: 0; font-size: 14px; }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <div class="lang" role="group" aria-label="Language">
+    <button type="button" id="btn-ja" data-set="ja" aria-pressed="true">日本語</button>
+    <button type="button" id="btn-en" data-set="en" aria-pressed="false">English</button>
+  </div>
+
+  <div class="fabric" aria-hidden="true"><svg id="band" viewBox="0 0 420 60" preserveAspectRatio="xMidYMid meet"></svg></div>
+
+  <header>
+    <p class="kicker">TSUMUGIWORKS</p>
+    <h1 lang-only="ja">クロスステッチ図案と藍染</h1>
+    <h1 lang-only="en">Cross-stitch patterns in Japan Blue</h1>
+    <p class="intro" lang-only="ja">日本の伝統文様を、藍色5色だけで刺す図案を作っています。図案はPDFでダウンロードできます。</p>
+    <p class="intro" lang-only="en">I design cross-stitch patterns of traditional Japanese motifs using only five indigo shades. Patterns are sold as PDF downloads.</p>
+  </header>
+
+  <ul class="links">
+    <li>
+      <a id="link-etsy" href="https://tsumugiworksjp.etsy.com/?utm_source=meishi&utm_medium=qr" target="_blank" rel="noopener">
+        <span class="name"><span lang-only="ja">Etsyショップ</span><span lang-only="en">Etsy shop</span><span aria-hidden="true">→</span></span>
+        <span class="desc" lang-only="ja">図案を買う(PDF・英語表記)</span>
+        <span class="desc" lang-only="en">Buy patterns (PDF download)</span>
+      </a>
+    </li>
+    <li id="item-insta" hidden>
+      <a id="link-insta" href="#" target="_blank" rel="noopener">
+        <span class="name"><span lang-only="ja">Instagram</span><span lang-only="en">Instagram</span><span aria-hidden="true">→</span></span>
+        <span class="desc" lang-only="ja">図案づくりと糸染めの記録</span>
+        <span class="desc" lang-only="en">Pattern design and thread dyeing notes</span>
+      </a>
+    </li>
+    <li>
+      <a id="link-site" href="https://tsumugi-works-site.pages.dev/?utm_source=meishi&utm_medium=qr" target="_blank" rel="noopener">
+        <span class="name"><span lang-only="ja">Webサイト</span><span lang-only="en">Website</span><span aria-hidden="true">→</span></span>
+        <span class="desc" lang-only="ja">ブランドと図案の紹介</span>
+        <span class="desc" lang-only="en">About the brand and the patterns</span>
+      </a>
+    </li>
+  </ul>
+
+  <dl class="facts">
+    <dt lang-only="ja">図案サイズ</dt><dt lang-only="en">Pattern size</dt>
+    <dd>100×100 / 130×130 / 150×150 <span lang-only="ja">ステッチ</span><span lang-only="en">stitches</span></dd>
+    <dt lang-only="ja">使う色</dt><dt lang-only="en">Colors</dt>
+    <dd><span lang-only="ja">生成り + 藍の4段階(全5色)</span><span lang-only="en">Natural + 4 indigo shades (5 total)</span></dd>
+    <dt lang-only="ja">対応アプリ</dt><dt lang-only="en">App</dt>
+    <dd>Pattern Keeper</dd>
+  </dl>
+
+  <p class="foot">Hiroshima, Japan</p>
+</div>
+
+<script>
+(function () {
+  // Optional: set the Instagram URL here, e.g. "https://www.instagram.com/yourhandle/". Empty keeps the button hidden.
+  var INSTAGRAM_URL = "https://www.instagram.com/mio_tsumugiworks/";
+
+  // Stitched band: X stitches in the five-color palette on aida-colored fabric.
+  var pal = ["#C3D3DE", "#6E85B7", "#2A3B5F", "#1B2A4A"];
+  var cols = 35, rows = 5, cell = 12, pad = 0, out = "";
+  for (var r = 0; r < rows; r++) {
+    for (var c = 0; c < cols; c++) {
+      var v = (c + r * 2) % 6, t = v <= 3 ? v : 6 - v;
+      var x = c * cell, y = r * cell, col = pal[t], m = 2.2, s = cell - 2.2;
+      out += '<path d="M' + (x + m) + ' ' + (y + m) + 'L' + (x + s) + ' ' + (y + s) +
+             'M' + (x + s) + ' ' + (y + m) + 'L' + (x + m) + ' ' + (y + s) +
+             '" stroke="' + col + '" stroke-width="2.4" stroke-linecap="round" fill="none"/>';
+    }
+  }
+  var band = document.getElementById("band");
+  band.setAttribute("viewBox", "0 0 " + cols * cell + " " + rows * cell);
+  band.innerHTML = out;
+
+  if (INSTAGRAM_URL) {
+    document.getElementById("link-insta").href = INSTAGRAM_URL;
+    document.getElementById("item-insta").hidden = false;
+  }
+
+  function setLang(l) {
+    document.documentElement.lang = l;
+    document.getElementById("btn-ja").setAttribute("aria-pressed", String(l === "ja"));
+    document.getElementById("btn-en").setAttribute("aria-pressed", String(l === "en"));
+    try { localStorage.setItem("tw-lang", l); } catch (e) {}
+  }
+  var saved = null;
+  try { saved = localStorage.getItem("tw-lang"); } catch (e) {}
+  var initial = saved || ((navigator.language || "en").toLowerCase().indexOf("ja") === 0 ? "ja" : "en");
+  setLang(initial);
+  document.querySelectorAll(".lang button").forEach(function (b) {
+    b.addEventListener("click", function () { setLang(b.getAttribute("data-set")); });
+  });
+})();
+</script>
+
+</body>
+</html>
