@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>くるみ割り人形の図案を無料でもらう（12月20日まで） | Tsumugi works</title>
+<meta name="description" content="くるみ割り人形のクロスステッチ図案（PDF）を、メールアドレスの登録で無料でお送りします。配布は2026年12月20日まで。">
+<link rel="canonical" href="https://tsumugiworksjp.com/free-nutcracker">
+<link rel="alternate" hreflang="ja" href="https://tsumugiworksjp.com/free-nutcracker">
+<link rel="alternate" hreflang="en" href="https://tsumugiworksjp.com/free-nutcracker-en">
+<link rel="alternate" hreflang="x-default" href="https://tsumugiworksjp.com/free-nutcracker-en">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --kinari: #F2EDE4;
+    --paper: #FAF6EE;
+    --ai-tint: #DCE6EE;
+    --ai-1: #C3D3DE;
+    --ai-2: #6E85B7;
+    --ai-3: #2A3B5F;
+    --ai-4: #1B2A4A;
+    --ink: #2B2B2B;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+    color: var(--ink);
+    line-height: 1.95;
+    font-weight: 400;
+    background-color: var(--kinari);
+    background-image:
+      repeating-linear-gradient(0deg, rgba(27,42,74,.035) 0 1px, transparent 1px 5px),
+      repeating-linear-gradient(90deg, rgba(27,42,74,.035) 0 1px, transparent 1px 5px);
+  }
+  h1, h2, h3, .serif { font-family: 'Noto Serif JP', serif; }
+  a { color: inherit; text-decoration: none; }
+  a:focus-visible, .btn:focus-visible { outline: 3px solid var(--ai-3); outline-offset: 3px; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 0 24px; }
+  .stitch-band { display: block; width: 100%; height: 30px; }
+
+  header { position: sticky; top: 0; z-index: 100; background: rgba(250,246,238,0.95); backdrop-filter: blur(6px); border-bottom: 2px dashed var(--ai-1); }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; padding: 14px 24px; }
+  .logo { font-size: 1.15rem; letter-spacing: 0.06em; font-weight: 700; color: var(--ai-4); }
+  nav { display: flex; gap: 28px; font-size: 0.9rem; align-items: center; }
+  nav a { color: var(--ai-3); padding: 4px 0; border-bottom: 2px solid transparent; transition: border-color .2s; }
+  nav a:hover { border-color: var(--ai-2); }
+  nav a.nav-cta { background: var(--ai-4); color: #fff; border: 0; padding: 8px 18px; border-radius: 999px; font-size: 0.84rem; }
+  nav a.nav-cta:hover { background: var(--ai-3); }
+
+  /* 記事の見出し: 麻の葉の帯の上に、縫い目つきのパッチ */
+  .article-head { position: relative; overflow: hidden; background: var(--ai-tint); padding: 48px 20px 52px; }
+  .article-head .asanoha { position: absolute; inset: 0; width: 100%; height: 100%; opacity: .16; }
+  .patch { position: relative; z-index: 1; max-width: 700px; margin: 0 auto; background: var(--paper); border-radius: 6px; padding: 40px 36px 38px; box-shadow: 0 3px 0 rgba(27,42,74,.12); outline: 2px dashed var(--ai-2); outline-offset: -12px; }
+  .crumb { font-size: .85rem; color: var(--ai-3); margin-bottom: 14px; }
+  .crumb a { text-decoration: underline; text-underline-offset: 3px; }
+  .date { font-size: .88rem; color: var(--ai-3); letter-spacing: .05em; margin-bottom: 6px; }
+  h1 { font-size: clamp(1.45rem, 5.4vw, 2.05rem); line-height: 1.6; font-weight: 700; color: var(--ai-4); letter-spacing: .03em; text-wrap: balance; }
+  .ph { display: inline-block; }
+
+  article { padding: 56px 24px 24px; }
+  .body { max-width: 40em; margin: 0 auto; }
+  .body p { margin-bottom: 20px; font-size: 1.02rem; color: #333; }
+  .body h2 { font-size: 1.4rem; color: var(--ai-4); margin: 52px 0 18px; padding-bottom: 10px; border-bottom: 2px dashed var(--ai-2); line-height: 1.6; }
+  .body h3 { font-size: 1.2rem; color: var(--ai-4); margin: 30px 0 8px; line-height: 2; }
+  .body h3 rt { font-size: .5em; font-weight: 500; letter-spacing: .08em; color: var(--ai-3); }
+  .body .motif { padding-left: 18px; border-left: 4px solid var(--ai-1); margin-bottom: 8px; }
+  .body .motif p { margin-bottom: 8px; }
+  .palette { display: flex; flex-wrap: wrap; gap: 10px; margin: 6px 0 24px; }
+  .palette span { display: inline-flex; align-items: center; gap: 8px; font-size: .9rem; color: var(--ai-4); }
+  .palette i { display: inline-block; width: 22px; height: 22px; border-radius: 4px; border: 1px solid rgba(27,42,74,.25); }
+  .btns { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+  .btn { display: inline-block; padding: 13px 30px; border-radius: 999px; font-size: .95rem; letter-spacing: .05em; font-weight: 700; transition: transform .2s, box-shadow .2s, background .2s; }
+  .btn-primary { background: var(--ai-4); color: #fff; }
+  .btn-primary:hover { background: var(--ai-3); transform: translateY(-2px); box-shadow: 0 6px 14px rgba(27,42,74,.25); }
+  .btn-outline { border: 2px dashed var(--ai-3); color: var(--ai-3); }
+  .btn-outline:hover { background: rgba(110,133,183,.15); }
+
+  footer { margin-top: 56px; background: #EAE2D0; color: var(--ai-3); padding: 0 24px 40px; text-align: center; font-size: .88rem; }
+  footer .stitch-band { margin: 0 -24px 32px; width: calc(100% + 48px); }
+  footer a { color: var(--ai-4); text-decoration: underline; text-underline-offset: 3px; }
+  footer .foot-links { margin-bottom: 14px; display: flex; flex-wrap: wrap; gap: 8px 20px; justify-content: center; }
+
+  @media (max-width: 600px) {
+    nav a:not(.nav-cta) { display: none; }
+    .article-head { padding: 28px 14px 32px; }
+    .patch { padding: 30px 22px 28px; outline-offset: -9px; }
+    article { padding: 40px 20px 16px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .btn, nav a { transition: none; }
+    .btn-primary:hover { transform: none; }
+  }
+
+  .deadline { margin-top: 14px; font-size: .95rem; font-weight: 700; color: var(--ai-3); }
+  .body ul.list, .body ol.steps { margin: 0 0 24px 1.4em; padding: 0; }
+  .body ul.list li, .body ol.steps li { margin-bottom: 8px; font-size: 1.02rem; color: #333; }
+  .body ol.steps li { padding-left: 4px; }
+  .signup { margin: 36px 0 8px; padding: 28px 26px; background: var(--paper); border-radius: 6px; box-shadow: 0 3px 0 rgba(27,42,74,.12); outline: 2px dashed var(--ai-2); outline-offset: -9px; text-align: center; }
+  .signup p { margin-bottom: 16px; font-weight: 700; color: var(--ai-4); }
+  .note { font-size: .92rem; color: #444; }
+  .note a { text-decoration: underline; text-underline-offset: 3px; }
+  .palette { flex-direction: column; gap: 8px; }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <pattern id="xstitch" width="60" height="30" patternUnits="userSpaceOnUse">
+      <g fill="none" stroke-width="2.4" stroke-linecap="round">
+        <g stroke="#1B2A4A"><path d="M5 4l9 9M14 4l-9 9"/><path d="M17 4l9 9M26 4l-9 9"/></g>
+        <g stroke="#6E85B7"><path d="M29 4l9 9M38 4l-9 9"/></g>
+        <g stroke="#C3D3DE"><path d="M41 4l9 9M50 4l-9 9"/></g>
+        <g stroke="#6E85B7"><path d="M5 18l9 9M14 18l-9 9"/></g>
+        <g stroke="#C3D3DE"><path d="M17 18l9 9M26 18l-9 9"/></g>
+        <g stroke="#2A3B5F"><path d="M29 18l9 9M38 18l-9 9"/><path d="M41 18l9 9M50 18l-9 9"/></g>
+      </g>
+    </pattern>
+    <pattern id="asanoha" width="48" height="83.138" patternUnits="userSpaceOnUse">
+      <path d="M48 83.14L72 69.28M-24 41.57L0 27.71M-24 41.57L0 55.43M48 27.71L72 41.57M24 41.57L48 83.14M0 0L24 -41.57M-24 96.99L0 83.14M0 -27.71L0 0M-24 -41.57L0 0M24 124.71L48 83.14M0 83.14L24 96.99M48 83.14L72 124.71M48 0L72 -41.57M-48 0L0 0M24 41.57L48 0M0 83.14L24 124.71M0 83.14L48 83.14M48 83.14L72 96.99M0 83.14L24 41.57M-48 83.14L0 83.14M48 -27.71L48 0M-24 69.28L0 83.14M0 0L24 13.86M-24 41.57L24 41.57M48 0L96 0M-24 41.57L0 83.14M48 0L48 27.71M0 0L24 -13.86M24 -13.86L48 0M48 0L72 13.86M48 55.43L72 41.57M48 83.14L72 41.57M0 0L0 27.71M-24 124.71L0 83.14M24 41.57L48 27.71M48 55.43L48 83.14M24 13.86L24 41.57M0 0L24 41.57M-24 41.57L0 0M24 41.57L48 55.43M24 96.99L48 83.14M0 83.14L24 69.28M48 0L72 -13.86M24 -41.57L48 0M48 83.14L96 83.14M24 13.86L48 0M24 69.28L48 83.14M0 27.71L24 41.57M0 0L48 0M-24 13.86L0 0M24 41.57L24 69.28M0 55.43L24 41.57M-24 -13.86L0 0M48 0L72 41.57M48 83.14L48 110.85M0 55.43L0 83.14M24 41.57L72 41.57M0 83.14L0 110.85" fill="none" stroke="#1B2A4A" stroke-width="0.9"/>
+    </pattern>
+  </defs>
+</svg>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="/">Tsumugi works</a>
+    <nav>
+      <a href="/">トップ</a>
+      <a href="/#journal">ブログ一覧</a>
+      <a href="https://tsumugiworksjp.etsy.com" class="nav-cta" target="_blank" rel="noopener">Etsy Shop</a>
+    </nav>
+  </div>
+</header>
+
+<div class="article-head">
+  <svg class="asanoha" aria-hidden="true" focusable="false"><rect width="100%" height="100%" fill="url(#asanoha)"/></svg>
+  <div class="patch">
+    <div class="crumb"><a href="/">トップ</a>　／　<a href="/free-nutcracker-en" hreflang="en" lang="en">English</a></div>
+    <h1><span class="ph">くるみ割り人形の図案を、</span><span class="ph">無料でお送りします</span></h1>
+    <div class="deadline">配布は12月20日（日）まで</div>
+  </div>
+</div>
+<svg class="stitch-band" aria-hidden="true" focusable="false"><rect width="100%" height="100%" fill="url(#xstitch)"/></svg>
+
+<article>
+  <div class="body">
+    <p>クリスマス向けの、くるみ割り人形のクロスステッチ図案（PDF）を、期間限定で無料で配布します。メールアドレスを登録すると、ダウンロードのリンクがメールで届きます。</p>
+
+    <h2>図案の内容</h2>
+    <ul class="list">
+      <li>3体のくるみ割り人形が並んだ図案です</li>
+      <li>図案サイズ：196×167目</li>
+      <li>14カウントの布で、完成サイズは35.6×30.3cm</li>
+      <li>総ステッチ数：14,854目</li>
+      <li>糸：DMCの4色、合計10かせ</li>
+    </ul>
+    <p>目数の多い、大きめの図案です。時間をかけて刺したい方に向いています。</p>
+
+    <h2>使う糸の色</h2>
+    <div class="palette">
+      <span><i style="background:#1A2E4D"></i>DMC 336（Navy Blue）</span>
+      <span><i style="background:#7784AF"></i>DMC 793（Cornflower Blue MD）</span>
+      <span><i style="background:#9AB3CD"></i>DMC 3752（Antique Blue VY LT）</span>
+      <span><i style="background:#FBFAFA"></i>DMC BLANC（白）</span>
+    </div>
+
+    <h2>受け取り方</h2>
+    <ol class="steps">
+      <li>下のボタンから、メールアドレスを登録します。</li>
+      <li>登録後に届くメールのリンクから、PDFをダウンロードします。</li>
+      <li>印刷するか、画面を見ながら刺します。</li>
+    </ol>
+
+    <div class="signup">
+      <p>12月20日（日）まで・登録は無料です</p>
+      <a href="https://tsumugiworks.systeme.io/nutcracker-ja" class="btn btn-primary">メールアドレスを登録する</a>
+    </div>
+
+    <h2>登録後のメールについて</h2>
+    <p>登録すると、図案PDFのダウンロードリンクが届きます。そのあと、新しい図案や、藍づくりの記録を、ときどきメールでお知らせします。メールの最後にあるリンクから、いつでも配信を止められます。</p>
+    <p class="note">メールアドレスの取り扱いは、<a href="/privacy-policy-ja.html">プライバシーポリシー</a>に書いています。ご不明な点は、tsumugiworks25@gmail.com までご連絡ください。</p>
+
+    <div class="btns">
+      <a href="https://tsumugiworksjp.etsy.com" class="btn btn-outline" target="_blank" rel="noopener">Etsyの図案を見る</a>
+      <a href="/#journal" class="btn btn-outline">ブログを読む</a>
+    </div>
+  </div>
+</article>
+
+<footer>
+  <svg class="stitch-band" aria-hidden="true" focusable="false"><rect width="100%" height="100%" fill="url(#xstitch)"/></svg>
+  <div class="foot-links">
+    <a href="/">トップ</a>
+    <a href="/free-nutcracker">無料図案</a>
+    <a href="https://tsumugiworksjp.etsy.com" target="_blank" rel="noopener">Etsy Shop</a>
+    <a href="https://www.instagram.com/mio_tsumugiworks/" target="_blank" rel="noopener">Instagram</a>
+    <a href="/privacy-policy-ja.html">プライバシーポリシー</a>
+    <a href="/data-deletion-ja.html">データ削除の手順</a>
+  </div>
+  <div>© 2026 Tsumugi works. All words and stitches by Mio.</div>
+</footer>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "04e89768965545cba0041b7ee4f90d53"}'></script><!-- End Cloudflare Web Analytics -->
+
+</body>
+</html>
